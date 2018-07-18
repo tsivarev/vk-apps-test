@@ -6,7 +6,6 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 export default class App extends Component {
 
-
     componentWillMount() {
         VKConnect.subscribe(function(e) {
             e = e.detail;
@@ -48,8 +47,8 @@ export default class App extends Component {
 
     render() {
         return (
-            <UI.View activePanel="main">
-                <UI.Panel id="main" header={false}>
+            <UI.View activePanel="main" header={false}>
+                <UI.Panel id="main">
                     <UI.Group title="Data">
                         <UI.FormLayout>
                             <UI.Textarea id='data' placeholder='{"method": "users.get", "params": {}}' />
