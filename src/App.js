@@ -31,13 +31,11 @@ export default class App extends Component {
             "VKWebAppShare",
             "VKWebAppAllowNotifications",
             "VKWebAppDenyNotifications",
-            "VKWebAppViewUpdateNavigationState",
             "VKWebAppGoBack",
             "VKWebAppGoForward",
             "VKWebAppSetTitle",
             "VKWebAppShowWallPostBox",
             "VKWebAppGetEmail",
-            "VKWebAppSetLocation",
             "VKWebAppAllowMessagesFromGroup",
             "VKWebAppJoinGroup",
             "VKWebAppOpenApp",
@@ -49,6 +47,9 @@ export default class App extends Component {
         return (
             <UI.View activePanel="main" header={false}>
                 <UI.Panel id="main">
+                    <UI.PanelHeader>
+                        VK Connect Test
+                    </UI.PanelHeader>
                     <UI.Group title="Data">
                         <UI.FormLayout>
                             <UI.Textarea id='data' placeholder='{"method": "users.get", "params": {}}' />
