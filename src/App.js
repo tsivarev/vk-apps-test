@@ -45,7 +45,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <UI.View activePanel="main" header={false}>
+            <UI.View activePanel="main">
                 <UI.Panel id="main">
                     <UI.PanelHeader>
                         VK Connect Test
