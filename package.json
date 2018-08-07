@@ -5,7 +5,7 @@
   "homepage": "https://tsivarev.github.io/vk-apps-test/",
   "dependencies": {
     "@vkontakte/icons": "^1.1.1",
-    "@vkontakte/vkui": "^2.5.8",
+    "@vkontakte/vkui": "^2.6.0",
     "@vkontakte/vkui-connect": "^1.0.0",
     "core-js": "^2.5.7",
     "gh-pages": "^1.2.0",
