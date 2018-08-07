@@ -6,7 +6,7 @@ import * as VKConnect from '@vkontakte/vkui-connect';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-VKConnect.send('VKWebAppInit', {});
+VKConnect.send('VKWebAppInit', {no_toolbar: false});
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 registerServiceWorker();

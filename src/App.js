@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as UI from '@vkontakte/vkui';
 import * as VKConnect from '@vkontakte/vkui-connect';
-import './App.css';
 import '@vkontakte/vkui/dist/vkui.css';
 
 export default class App extends Component {
@@ -31,9 +30,6 @@ export default class App extends Component {
             "VKWebAppShare",
             "VKWebAppAllowNotifications",
             "VKWebAppDenyNotifications",
-            "VKWebAppGoBack",
-            "VKWebAppGoForward",
-            "VKWebAppSetTitle",
             "VKWebAppShowWallPostBox",
             "VKWebAppGetEmail",
             "VKWebAppAllowMessagesFromGroup",
