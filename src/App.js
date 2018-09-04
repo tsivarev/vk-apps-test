@@ -36,6 +36,7 @@ export default class App extends Component {
             "VKWebAppJoinGroup",
             "VKWebAppOpenApp",
             "VKWebAppOpenQR",
+            "VKWebAppSetViewSettings",
         ];
     }
 
