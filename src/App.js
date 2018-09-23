@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import * as UI from '@vkontakte/vkui';
+import React, {Component} from 'react';
+import {FormLayout, Group, List, ListItem, Panel, PanelHeader, Textarea, View} from '@vkontakte/vkui';
 import * as VKConnect from '@vkontakte/vkui-connect';
 import '@vkontakte/vkui/dist/vkui.css';
 
 export default class App extends Component {
 
     componentWillMount() {
-        VKConnect.subscribe(function(e) {
+        VKConnect.subscribe(function (e) {
             e = e.detail;
             let type = e['type'];
             if (['VKWebAppUpdateInfo', 'VKWebAppUpdateInsets'].indexOf(type) === -1) {
@@ -42,29 +42,29 @@ export default class App extends Component {
 
     render() {
         return (
-            <UI.View activePanel="main">
-                <UI.Panel id="main">
-                    <UI.PanelHeader>
+            <View activePanel="main">
+                <Panel id="main">
+                    <PanelHeader>
                         VK Connect Test
-                    </UI.PanelHeader>
-                    <UI.Group title="Data">
-                        <UI.FormLayout>
-                            <UI.Textarea id='data' placeholder='{"method": "users.get", "params": {}}' />
-                        </UI.FormLayout>
-                    </UI.Group>
+                    </PanelHeader>
+                    <Group title="Data">
+                        <FormLayout>
+                            <Textarea id='data' placeholder='{"method": "users.get", "params": {}}'/>
+                        </FormLayout>
+                    </Group>
 
-                    <UI.Group title="Response">
-                        <UI.FormLayout>
-                            <UI.Textarea id='response' />
-                        </UI.FormLayout>
-                    </UI.Group>
+                    <Group title="Response">
+                        <FormLayout>
+                            <Textarea id='response'/>
+                        </FormLayout>
+                    </Group>
 
-                    <UI.Group title="Event type">
-                        <UI.List>
+                    <Group title="Event type">
+                        <List>
                             {
-                                this.events.map(function(eventName) {
+                                this.events.map(function (eventName) {
                                     return (
-                                        <UI.ListItem onClick={() => {
+                                        <ListItem onClick={() => {
                                             let data = {};
                                             try {
                                                 let input = document.getElementById('data').value;
@@ -73,20 +73,20 @@ export default class App extends Component {
                                                 }
 
                                                 VKConnect.send(eventName, data);
-                                            } catch(e) {
+                                            } catch (e) {
                                                 alert(e);
                                             }
                                         }
                                         }>
                                             {eventName}
-                                        </UI.ListItem>
+                                        </ListItem>
                                     );
                                 })
                             }
-                        </UI.List>
-                    </UI.Group>
-                </UI.Panel>
-            </UI.View>
+                        </List>
+                    </Group>
+                </Panel>
+            </View>
         );
     }
 }

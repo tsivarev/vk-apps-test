@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://tsivarev.github.io/vk-apps-test/",
   "dependencies": {
-    "@vkontakte/icons": "^1.1.1",
     "@vkontakte/vkui": "^2.9.4",
     "@vkontakte/vkui-connect": "^1.0.0",
     "core-js": "^2.5.7",
@@ -14,7 +13,7 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "PORT=10888 react-scripts start",
+    "start": "PORT=10889 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
