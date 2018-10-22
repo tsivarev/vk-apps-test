@@ -35,6 +35,7 @@ export default class App extends Component {
             "VKWebAppAllowMessagesFromGroup",
             "VKWebAppJoinGroup",
             "VKWebAppOpenApp",
+            "VKWebAppClose",
             "VKWebAppOpenQR",
             "VKWebAppSetViewSettings",
         ];
