@@ -37,6 +37,7 @@ export default class App extends Component {
             "VKWebAppOpenApp",
             "VKWebAppClose",
             "VKWebAppOpenQR",
+            "VKWebAppGetPersonalCard",
             "VKWebAppSetViewSettings",
         ];
     }
