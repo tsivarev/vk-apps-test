@@ -9,7 +9,7 @@ export default class App extends Component {
         VKConnect.subscribe(function (e) {
             e = e.detail;
             let type = e['type'];
-            if (['VKWebAppUpdateInfo', 'VKWebAppUpdateInsets'].indexOf(type) === -1) {
+            if (['VKWebAppUpdateInfo', 'VKWebAppUpdateInsets', 'VKWebAppUpdateConfig'].indexOf(type) === -1) {
                 document.getElementById('response').value = JSON.stringify(e);
             }
         });
