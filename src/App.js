@@ -9,6 +9,7 @@ export default class App extends Component {
         VKConnect.subscribe(function (e) {
             e = e.detail;
             let type = e['type'];
+            document.getElementById('debug_response').value = JSON.stringify(e);
             if (['VKWebAppUpdateInfo', 'VKWebAppUpdateInsets', 'VKWebAppUpdateConfig'].indexOf(type) === -1) {
                 document.getElementById('response').value = JSON.stringify(e);
             }
@@ -59,6 +60,12 @@ export default class App extends Component {
                     <Group title="Response">
                         <FormLayout>
                             <Textarea id='response'/>
+                        </FormLayout>
+                    </Group>
+
+                    <Group title="Debug response">
+                        <FormLayout>
+                            <Textarea id='debug_response'/>
                         </FormLayout>
                     </Group>
 
