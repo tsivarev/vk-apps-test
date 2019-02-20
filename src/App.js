@@ -5,7 +5,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 export default class App extends Component {
 
-    componentWillMount() {
+    componentDidMount() {
         VKConnect.subscribe(function (e) {
             e = e.detail;
             let type = e['type'];
@@ -14,6 +14,8 @@ export default class App extends Component {
                 document.getElementById('response').value = JSON.stringify(e);
             }
         });
+
+        VKConnect.send('VKWebAppInit', {});
     }
 
 
@@ -41,6 +43,15 @@ export default class App extends Component {
             "VKWebAppOpenQR",
             "VKWebAppGetPersonalCard",
             "VKWebAppSetViewSettings",
+            "VKWebAppRedirect",
+            "VKWebAppTapticImpactOccurred",
+            "VKWebAppTapticNotificationOccurred",
+            "VKWebAppTapticSelectionChanged",
+            "VKWebAppFlashGetInfo",
+            "VKWebAppFlashSetLevel",
+            "VKWebAppAddToFavorites",
+            "VKWebAppAddToCommunity",
+            "VKWebAppGetCommunityAuthToken"
         ];
     }
 

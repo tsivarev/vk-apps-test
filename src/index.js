@@ -15,7 +15,4 @@ connect.subscribe((e) => {
     }
 });
 
-// Init VK App
-connect.send('VKWebAppInit', {});
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
